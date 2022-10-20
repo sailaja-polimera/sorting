@@ -1,0 +1,27 @@
+//selection sort(sorting from starting element)
+#include <stdio.h>
+
+int main()
+{
+   int a[]={9,3,1,4,2,7,5};
+   int min,temp;
+   for(int i=0;i<7;i++)  //starts from first element
+   {
+       min=i;     //consider stating element as min
+       for(int j=i+1;j<7;j++)   //starts from 2nd element
+       {
+          if(a[j]<a[min])   //check sec elem is less than min eleme then no swap 
+          {
+              min=j;    //and changin min ele to 2nd value
+          }
+       }
+       temp=a[i];  //swaping stating and min element
+       a[i]=a[min];
+       a[min]=temp;
+   }
+ for(int i=0;i<7;i++)
+   {
+       printf("%d ",a[i]); //printing sorted elements
+   }
+    return 0;
+}
